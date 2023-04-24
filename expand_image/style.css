@@ -1,0 +1,14 @@
+.img_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.img_container img {
+  width: 9rem;
+  height: 7rem;
+  object-fit: contain;
+}
+
+.expand {
+  min-width: 1000px;
+}
