@@ -1,14 +1,33 @@
-.img_container {
+* {
+  background-color: #fdf2e9;
+}
+
+body {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.img_container img {
-  width: 9rem;
-  height: 7rem;
-  object-fit: contain;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.expand {
-  min-width: 1000px;
+.panel {
+  border-radius: 110px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.panel img {
+  object-fit: cover;
+  height: 80vh;
+  width: 8rem;
+  transition: width 0.7s;
+}
+
+.active img {
+  width: 40rem;
 }

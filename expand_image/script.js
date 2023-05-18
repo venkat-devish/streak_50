@@ -1,7 +1,18 @@
-const imageContainer = document.querySelector('.img_container')
-let imagesBox = ['./images/1.jpg', './images/1.jpg', './images/1.jpg', './images/1.jpg', './images/1.jpg', './images/1.jpg']
-let html = "";
-for (let i = 0; i < imagesBox.length; i++) {
-    imageContainer.innerHTML += '<img src=\"' + imagesBox[i] + '\"/>'
-}
-console.log(imageContainer)
+const panels = document.querySelectorAll('.panel')
+console.log(panels)
+
+panels.forEach(panel => {
+    panel.addEventListener('click', () => {
+        removeActivePanels();
+        panel.classList.add('active')
+    })
+})
+
+function removeActivePanels() {
+    panels.forEach(panel => {
+        if (panel.classList.contains('active')) {
+            panel.classList.remove('active')
+            console.log(panels)
+        }
+    })
+} 
