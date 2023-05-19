@@ -4,5 +4,5 @@
 
 | Day # | Project | Live Demo |
 |-----------------|-----------------|-----------------|
-| 1 | Expanding Cards | [CLICK HERE](https://rainbow-gumdrop-542c61.netlify.app/) |
-| 2 | Multi Steps | IN PROGRESS |
+| 01 | Expanding Cards | [CLICK HERE](https://rainbow-gumdrop-542c61.netlify.app/) |
+| 02 | Multi Steps | IN PROGRESS |
