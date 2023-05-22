@@ -9,10 +9,17 @@ const prev = document.querySelector('.prev')
 const step_bar = document.querySelector('.status_bar');
 
 step[ref].classList.add('active')
+prev.classList.add('disabled');
+prev.setAttribute('disabled', '')
 next.addEventListener('click', update)
 prev.addEventListener('click', remove)
 
 function remove() {
+    ref -= 1;
+    if (ref === 0) {
+        prev.classList.add('disabled');
+        prev.setAttribute('disabled', '')
+    }
     next.classList.remove('disabled');
     next.removeAttribute('disabled')
     const actives = document.querySelectorAll('.active')
@@ -21,11 +28,14 @@ function remove() {
         step[prev_cnt].classList.remove('active')
         prev_cnt - 1;
     }
-    console.log(prev_cnt, step)
+    percent = ((actives.length - 2) / (n - 1)) * 100;
+    step_bar.style.width = `${percent}%`;
 }
 
 function update() {
     ref += 1;
+    prev.classList.remove('disabled');
+    prev.removeAttribute('disabled', '')
     if (ref > n - 2) {
         next.classList.add('disabled');
         next.setAttribute('disabled', '')
