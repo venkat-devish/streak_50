@@ -7,3 +7,4 @@
 | 01 | Expanding Cards | [CLICK HERE](https://rainbow-gumdrop-542c61.netlify.app/) |
 | 02 | Multi Steps | [CLICK HERE](https://comfy-frangollo-fbf772.netlify.app/) |
 | 03 | Expanding Search Widget | IN PROGRESS |
+| 04 | Lazy Loading | IN PROGRESS |
