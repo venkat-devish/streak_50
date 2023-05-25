@@ -1,37 +1,36 @@
-* {
-  transition: all 0.5s;
-}
-
 body {
-  background-color: blue;
-}
-
-button {
-  height: 37px;
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-  position: relative;
-}
-
-input.input {
-  border: none;
-  background-color: #fff;
-  height: 35px;
-  width: 0%;
-  transition: all 0.5s;
-  outline: none;
-}
-
-.search {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  transition: all 0.5s;
+  background-color: skyblue;
 }
 
-input.input.active {
-  width: 50%;
-  transition: all 0.5s;
+.search {
+  position: relative;
+}
+
+.search .input {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  width: 200px;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.search .input .active {
+  width: 200px;
+  transform: translateX(198px);
 }
