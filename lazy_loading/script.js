@@ -1,15 +1,19 @@
 const allImages = document.querySelectorAll('img[data-src]')
 
-const lazyLoad = (entries, observer) => {
+const imageObserver = (entries, observer) => {
     entries.forEach(entry => {
-        if (!entry.isIntersection) return;
-        observer.observe(entry)
-        console.log(entry)
-    });
+        if (!entry.isIntersecting) return;
+
+        entry.target.src = entry.target.dataset.src;
+        entry.target.addEventListener('load', () => {
+            entry.target.classList.remove('lazy-load')
+        })
+        observer.unobserve(entry.target)
+    })
 }
 
-const lazyLoadObserver = new IntersectionObserver(lazyLoad, { threshold: .9 })
+const lazyLoadObserver = new IntersectionObserver(imageObserver, { threshold: .9 })
 
-allImages.forEach(entry => {
-    lazyLoadObserver.observe(entry)
+allImages.forEach(img => {
+    lazyLoadObserver.observe(img)
 })
